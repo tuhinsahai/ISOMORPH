@@ -1,0 +1,31 @@
+# Tested with Python 3.12.
+# Install with:  pip install -r requirements.txt
+
+# --- Core scientific stack ---
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+
+# --- Deep-learning backbone ---
+torch>=2.0
+
+# --- Hugging Face hub (model checkpoints + caching) ---
+huggingface_hub>=0.20
+
+# --- TSF backbone used by the model wrappers ---
+gluonts>=0.14
+
+# --- Foundation forecasters evaluated in the paper ---
+chronos-forecasting     # imported as `chronos`
+uni2ts                  # imported as `uni2ts`     (Moirai)
+timesfm                 # imported as `timesfm`
+# Lag-Llama is published on GitHub, not PyPI. Install with:
+#   pip install git+https://github.com/time-series-foundation-models/lag-llama
+# It is imported as `lag_llama` by eval/lagllama_runner.py.
+
+# --- Optional: only needed by simulator/Supplychaingeo_item*.py
+#     plot_network_folium() (interactive HTML map). Not required by any
+#     of the simulation / eval / UQ / validation pipelines. ---
+# folium
+# branca
